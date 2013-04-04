@@ -27,5 +27,9 @@ public class TodoResult {
 	public void setItems(List<Todo> items) {
 		this.items = items;
 	}
+	public String isItEmpty(){
+		boolean lol = items.isEmpty();
+		return String.valueOf(items.get(0).getTitle());
+	}
 
 }

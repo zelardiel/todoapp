@@ -7,6 +7,7 @@ import com.pimfons.todoapp.R;
 import com.pimfons.todoapp.models.Todo;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -50,7 +51,7 @@ public class TodoListAdapter extends BaseAdapter{
 	@Override
 	public View getView(final int position, View convertView, final ViewGroup parent) {
 		if(convertView == null){
-			convertView = View.inflate(context, R.layout.activity_main, null);
+			convertView = View.inflate(context, R.layout.list_row, null);
 		}
 		
 
@@ -58,7 +59,7 @@ public class TodoListAdapter extends BaseAdapter{
 		final TextView status = (TextView) convertView.findViewById(R.id.status_text);
 		
 		final Todo item = (Todo)getItem(position);
-		
+		Log.d("testtag", item.getTitle());
 		title.setText(item.getTitle());
 		status.setText(convertStatus(item.getIsDone()));
 		

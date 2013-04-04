@@ -6,6 +6,7 @@ import com.pimfons.todoapp.connection.TodoService;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
+import android.util.Log;
 
 public class TodoListLoader extends AsyncTaskLoader<TodoResult> {
 	
@@ -20,6 +21,7 @@ public class TodoListLoader extends AsyncTaskLoader<TodoResult> {
 		TodoResult result = new TodoResult();
 		try {
 			result.setItems(service.getTodos());
+			Log.d("werk", result.isItEmpty());
 		} catch (DataException exception) {
 			result.setException(exception);
 		}

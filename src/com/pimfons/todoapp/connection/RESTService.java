@@ -3,6 +3,8 @@ package com.pimfons.todoapp.connection;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.pimfons.todoapp.models.Todo;
@@ -16,7 +18,7 @@ public class RESTService implements TodoService {
 		Type todoListType = new TypeToken<List<Todo>>(){}.getType();
 		Connector connector = ServiceFactory.getConnectorInstance();
 		String response = connector.performGetRequest(URL_TODOS);
-		System.out.println(response);
+		Log.d("response", response);
 		Gson gson = new Gson();
 		return gson.fromJson(response, todoListType);
 	}

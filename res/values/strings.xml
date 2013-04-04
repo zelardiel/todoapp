@@ -4,5 +4,6 @@
     <string name="app_name">Todoapp</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+	<color name="background_blue">#3BA0AD</color>
 </resources>
