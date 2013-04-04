@@ -5,21 +5,21 @@ public class Todo {
 	private String id;
 	private String title;
 	private String description;
-	private boolean isDone;
+	private String isDone;
 
 	public Todo(String title, String description) {
 		super();
 		this.title = title;
 		this.description = description;
-		this.isDone = false;
+		this.isDone = "0";
 	}
-	public Todo(String id, String title, boolean isDone) {
+	public Todo(String id, String title, String isDone) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.isDone = isDone;
 	}
-	public Todo(String id, String title, String description, boolean isDone) {
+	public Todo(String id, String title, String description, String isDone) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -38,10 +38,10 @@ public class Todo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public boolean isDone() {
+	public String getIsDone() {
 		return isDone;
 	}
-	public void setDone(boolean isDone) {
+	public void setIsDone(String isDone) {
 		this.isDone = isDone;
 	}
 	public String getId() {
